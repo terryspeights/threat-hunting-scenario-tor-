@@ -44,8 +44,8 @@
 DeviceFileEvents
 | where DeviceName == "mde-test-vm"
 | where FileName startswith "tor"
-| order by Timestamp desc 
-| project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName  
+| project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
+| order by Timestamp desc  
 
 // TOR Browser being silently installed
 // Take note of two spaces before the /S (I don't know why)
